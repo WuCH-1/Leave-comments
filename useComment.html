@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<meta name="keywords" content="HTML带表情的评论框,HTML评论框,表情评论框">
+	<title>HTML带表情的评论框</title>
+	<link rel="stylesheet" href="./css/useComment.css">
+</head>
+
+<body>
+	<div style="width:1200px;margin:0 auto;">
+		<div class="comment-wrap">
+			<h3>发表评论</h3>
+			<div class="comment-entry">
+				<div class="comment-text" contenteditable="true" onkeyup="seeFontNum(this)"></div>
+				<div class="regexpFont"><span>0</span>/300</div>
+				<div class="faceDiv"></div>
+				<div class="comment-Foot"> <a class="faceBtn" onclick="openFace(this)"></a><a class="postBtn">发表</a>
+				</div>
+			</div>
+		</div>
+		<div class="leaveWord-title"><b>留言列表</b> <span>已发布评论 <b>28</b> 条</span></div>
+		<!-- 用户 -->
+		<div class="comment-wrap use-comment-wrap">
+			<div class="ly-sayBox">
+				<div class="ly-head"><img src="./img/use-header.png"></div>
+				<div class="ly-main">
+					<div class="ly-top" onmouseleave="mLeave(this)" onmouseenter="mEnter(this)">
+						<div class="ly-name">
+							枕头煎蛋
+						</div>
+						<div class="ly-say">
+							目前的Kitchen的排版确实不如Anima，还不值得安利
+						</div>
+						<div class="ly-info">
+							01-16 15:04:42 来自 武汉市光谷校区
+							<span class="ly-reply" onclick="addReply(this,1)">
+								回复 <img src="./img/commentSay.png" alt="">
+							</span>
+							<span class="ly-detele" onclick="removeSelf(this,1)">
+								删除 <img src="./img/commentDeleter.png" alt="">
+							</span>
+						</div>
+					</div>
+					<!-- 子列表 -->
+					<div class="child-item">
+						<div class="ly-head"><img src="./img/use-header.png"></div>
+						<div class="child-main" onmouseleave="mLeave(this)" onmouseenter="mEnter(this)">
+							<div class="child-text">
+								<span class="darr"><i class="bd">◆</i><i class="bg">◆</i></span>
+								<div><b>echo</b> 回复 <b>海王 亚瑟</b></div>
+								这公众号我也关注了，解决了我很多问题，哪些工具不好用？很多人连kitchen插件都不知道，排版还很传统，文章也说了kitche
+								这公众号我也关注了，解决了我很多问题，哪些工具不好用？很多人连kitchen插件都不知道，排版还很传统，文章也说了kitche
+							</div>
+							<div class="ly-info">
+								01-16 15:04:42 来自 武汉市光谷校区
+								<span class="ly-reply" onclick="addReply(this,0)">
+									回复 <img src="./img/commentSay.png" alt="">
+								</span>
+								<span class="ly-detele" onclick="removeSelf(this,0)">
+									删除<img src="./img/commentDeleter.png" alt="">
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="./js/jquery.min.js"></script>
+	<script src="./js/useComment.js"></script>
+</body>
+
+</html>
